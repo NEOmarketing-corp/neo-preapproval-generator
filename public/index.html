@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="theme-color" content="#0A2540">
+    <title>NEO Pre-Approval Letter Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand-name" aria-label="NEO Home Loans">NEO HOME LOANS</div>
+      <div class="header-status" id="connectionStatus" role="status">
+        <span class="status-dot"></span>
+        Checking Canva
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">PRE-APPROVAL LETTER</p>
+          <h1>Complete the details.<br><span>Download the PDF.</span></h1>
+          <p class="intro-copy">
+            Create a personalized pre-approval letter without opening Canva.
+            Review the information carefully before generating the final PDF.
+          </p>
+        </div>
+        <div class="progress-card" aria-label="Three-step process">
+          <div><strong>01</strong><span>Borrower</span></div>
+          <div><strong>02</strong><span>Loan</span></div>
+          <div><strong>03</strong><span>Advisor</span></div>
+        </div>
+      </section>
+
+      <form id="letterForm" enctype="multipart/form-data">
+        <section class="form-section">
+          <div class="section-heading">
+            <span>01</span>
+            <div>
+              <h2>Borrower and property</h2>
+              <p>Enter the names and details exactly as they should appear.</p>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <label class="field field-wide">
+              <span>Recipient/client name</span>
+              <input name="recipientName" autocomplete="off" required placeholder="Jordan and Taylor Smith">
+            </label>
+
+            <label class="field">
+              <span>Date</span>
+              <input name="date" id="date" autocomplete="off" required placeholder="July 29, 2026">
+            </label>
+
+            <label class="field">
+              <span>Regarding</span>
+              <input name="regarding" autocomplete="off" required placeholder="Pre-Approval for Home Purchase">
+            </label>
+
+            <label class="field field-wide">
+              <span>Property</span>
+              <input name="property" autocomplete="off" required placeholder="123 Main Street, Boise, ID 83702 or To Be Determined">
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <span>02</span>
+            <div>
+              <h2>Loan details</h2>
+              <p>Confirm all amounts and terms against the approved loan information.</p>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Sales price amount</span>
+              <input name="salesPrice" class="currency-input" inputmode="decimal" autocomplete="off" required placeholder="$500,000">
+            </label>
+
+            <label class="field">
+              <span>Base loan amount</span>
+              <input name="baseLoanAmount" class="currency-input" inputmode="decimal" autocomplete="off" required placeholder="$400,000">
+            </label>
+
+            <label class="field">
+              <span>Loan-to-value amount</span>
+              <input name="loanToValue" class="percent-input" inputmode="decimal" autocomplete="off" required placeholder="80%">
+            </label>
+
+            <label class="field">
+              <span>Loan type or product</span>
+              <input name="loanType" autocomplete="off" required placeholder="Conventional">
+            </label>
+
+            <label class="field field-wide">
+              <span>Final approval review details</span>
+              <textarea name="finalApprovalDetails" rows="4" required placeholder="Final approval is subject to verification of income, assets, credit, property eligibility, appraisal, title review, and all applicable underwriting conditions."></textarea>
+              <small>Use only wording currently approved by NEO Marketing or your authorized compliance team.</small>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <span>03</span>
+            <div>
+              <h2>Mortgage Advisor</h2>
+              <p>Add the contact information borrowers should use for questions.</p>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Your name</span>
+              <input name="advisorName" autocomplete="name" required placeholder="Alex Morgan">
+            </label>
+
+            <label class="field">
+              <span>Your job title</span>
+              <input name="jobTitle" autocomplete="organization-title" required placeholder="Mortgage Advisor">
+            </label>
+
+            <label class="field">
+              <span>NMLS #</span>
+              <input name="nmls" inputmode="numeric" autocomplete="off" required placeholder="123456">
+            </label>
+
+            <label class="field">
+              <span>Your phone number</span>
+              <input name="phone" type="tel" autocomplete="tel" required placeholder="(208) 555-0123">
+            </label>
+
+            <label class="field field-wide">
+              <span>Your email address</span>
+              <input name="email" type="email" autocomplete="email" required placeholder="alex.morgan@example.com">
+            </label>
+
+            <label class="field field-wide upload-field" id="uploadField">
+              <span>Your photo or headshot</span>
+              <input name="headshot" id="headshot" type="file" accept="image/png,image/jpeg,image/webp" required>
+              <span class="upload-box">
+                <span class="upload-icon" aria-hidden="true">+</span>
+                <span>
+                  <strong id="uploadTitle">Choose a headshot</strong>
+                  <small id="uploadHelp">JPG, PNG, or WebP · maximum 10 MB</small>
+                </span>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <section class="submit-section">
+          <div>
+            <h2>Ready to create the letter?</h2>
+            <p>The completed design will be saved in Canva and the PDF will download automatically.</p>
+          </div>
+          <button type="submit" id="submitButton">
+            <span class="button-label">Generate PDF</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+        </section>
+
+        <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+      </form>
+
+      <section class="privacy-note">
+        <strong>Handle borrower information carefully.</strong>
+        This form does not intentionally retain submissions, but each generated letter is saved as a design in the connected Canva account.
+        Follow NEO’s approved information-handling and retention procedures.
+      </section>
+    </main>
+
+    <footer>
+      <span>NEO HOME LOANS</span>
+      <span>Internal tool · Authorized users only</span>
+    </footer>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
