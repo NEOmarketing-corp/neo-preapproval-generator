@@ -13,8 +13,15 @@
     ]
   },
   "vars": {
-    "CANVA_TEMPLATE_ID": "EAHQyRFm6tM"
+    "CANVA_TEMPLATE_ID": "EAHQyRFm6tM",
+    "CANVA_REDIRECT_URI": "https://neo-preapproval-generator.old-rice-24da.workers.dev/oauth/callback"
   },
+  "kv_namespaces": [
+    {
+      "binding": "CANVA_TOKENS",
+      "id": "3b93f17031df46b8bc04249169c02bc1"
+    }
+  ],
   "observability": {
     "enabled": true
   }
